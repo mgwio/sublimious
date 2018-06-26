@@ -162,7 +162,7 @@ class SpaceListener(sublime_plugin.EventListener):
         return False
 
     def on_window_command(self, window, command_name, args):
-        if command_name == "press_key" and args["key"]:
+        if command_name == "_nv_feed_key" and args["key"]:
             print(args["key"])
             if args["key"] == keys["SPACE"] and not self.inChain:
                 self.start_command_chain()
